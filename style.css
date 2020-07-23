@@ -1,0 +1,134 @@
+/* css reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	text-decoration:none;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* style------------------------------- */
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    margin-bottom: 24px;
+}
+.header h1{
+    float: left;
+}
+.header h1 a{    
+    background-image: url(img/M2.png);
+    width: 150px;
+    height: 150px;
+    display: block;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.nav{
+    display: flex;
+    flex-wrap: wrap;
+}
+.nav li a{
+    color: #ffffff;
+    background-color: #3399ff;
+    display:block;
+	font-weight:bold;
+    text-align:center;
+    padding: 10px;
+}
+.header li a:hover{
+    background-color: orange;
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+}
+.content{
+    width: 60%;
+    padding: 10px;
+    border: 2px solid #000000;
+}
+.content h2{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+.content p {
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+.sidebar{
+    width: 30%;
+    padding: 5px;
+    border: 2px solid #000000;
+}
+.sidebar img{
+    margin-bottom: 10px;
+    max-width: 100%;
+    height: auto;
+}
+.footer{
+    text-align: center;
+    padding: 8px 0;
+}
+/* rwd------------------------------- */
+@media(max-width:768px){
+    
+    .header h1 {
+        margin-bottom: 24px;
+    }
+    .nav li{
+        width: 50%;
+        margin: 0 auto 10px auto;
+    }
+    .container,.content,.sidebar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 24px;
+    }
+}
